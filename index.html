@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- 让网页适应手机、平板和电脑 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>王晨旭 | 个人主页</title>
+
+    <style>
+        /* =========================
+           基础设置
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, "Microsoft YaHei", sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           顶部导航栏
+        ========================= */
+
+        nav {
+            height: 70px;
+            background: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 8%;
+
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+            /* 滚动网页时导航栏保持在顶部 */
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav h2 {
+            color: #2563eb;
+        }
+
+        nav a {
+            color: #444;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+
+        /* =========================
+           首页
+        ========================= */
+
+        .hero {
+            min-height: 80vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 15px;
+        }
+
+        /* 姓名使用蓝色 */
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero p {
+            font-size: 21px;
+            color: #666;
+        }
+
+        /* 首页按钮 */
+        .button {
+            margin-top: 30px;
+
+            padding: 12px 28px;
+
+            background: #2563eb;
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           每个内容区域
+        ========================= */
+
+        section {
+            max-width: 1000px;
+            margin: auto;
+
+            padding: 80px 20px;
+        }
+
+        section h2 {
+            font-size: 32px;
+
+            text-align: center;
+
+            margin-bottom: 35px;
+        }
+
+
+        /* =========================
+           关于我
+        ========================= */
+
+        .about {
+            background: white;
+
+            border-radius: 15px;
+
+            padding: 35px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .about p {
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           项目
+        ========================= */
+
+        .projects {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.05);
+
+            transition: 0.2s;
+        }
+
+        /* 鼠标放到项目卡片上时向上移动 */
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+
+            color: #2563eb;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+
+        /* =========================
+           联系方式
+        ========================= */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact a {
+            color: #2563eb;
+        }
+
+
+        /* =========================
+           页脚
+        ========================= */
+
+        footer {
+            text-align: center;
+
+            padding: 30px;
+
+            background: #111827;
+
+            color: white;
+        }
+
+
+        /* =========================
+           手机适配
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 0 20px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         导航栏
+    ========================= -->
+
+    <nav>
+
+        <h2>王晨旭</h2>
+
+        <div>
+
+            <a href="#about">
+                关于我
+            </a>
+
+            <a href="#projects">
+                项目
+            </a>
+
+            <a href="#contact">
+                联系我
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         首页
+    ========================= -->
+
+    <div class="hero">
+
+        <h1>
+            你好，我是
+            <span>王晨旭</span>
+            👋
+        </h1>
+
+        <p>
+            一名正在探索计算机世界的大一学生
+        </p>
+
+        <a href="#about" class="button">
+            了解我
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         关于我
+    ========================= -->
+
+    <section id="about">
+
+        <h2>
+            关于我
+        </h2>
+
+        <div class="about">
+
+            <p>
+                你好，我叫王晨旭，目前是一名大一学生。
+            </p>
+
+            <p>
+                我正在学习计算机相关知识，
+                并尝试通过实际项目学习编程、
+                网页开发以及 GitHub 的使用。
+            </p>
+
+            <p>
+                这个网站本身就是我的第一个个人网页项目。
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         项目
+    ========================= -->
+
+    <section id="projects">
+
+        <h2>
+            我的项目
+        </h2>
+
+        <div class="projects">
+
+            <!-- 项目 1 -->
+
+            <div class="card">
+
+                <h3>
+                    🌐 个人主页
+                </h3>
+
+                <p>
+                    使用 HTML 和 CSS 制作的个人主页，
+                    并通过 GitHub Pages 发布到互联网。
+                </p>
+
+            </div>
+
+
+            <!-- 项目 2 -->
+
+            <div class="card">
+
+                <h3>
+                    💻 学习中的项目
+                </h3>
+
+                <p>
+                    这里将用于记录我在大学期间
+                    学习编程和开发过程中完成的项目。
+                </p>
+
+            </div>
+
+
+            <!-- 项目 3 -->
+
+            <div class="card">
+
+                <h3>
+                    🚀 Future Project
+                </h3>
+
+                <p>
+                    未来会在这里添加更多有趣的项目。
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         联系我
+    ========================= -->
+
+    <section id="contact">
+
+        <h2>
+            联系我
+        </h2>
+
+        <div class="contact">
+
+            <p>
+                Email：
+                <a href="mailto:wcx_111@mail.ustc.edu.com">
+                    wcx_111@mail.ustc.edu.com
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         页脚
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 王晨旭
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
